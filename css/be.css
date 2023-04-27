@@ -37,15 +37,15 @@ h2{
 }
 
 
-
-
-div.ydb:hover + .yc{
-	display: flex;
-}
 .yc {
   display: none;
   align-items: center;
 }
+
+div.ydb:hover + .yc{
+	display: flex;
+}
+
 div.ycg{
 	
 	width: 200px;
