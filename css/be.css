@@ -11,7 +11,6 @@ h1.bc{
 	text-align: center;
 	background-image: url("../foto/np1.jpg");
 	background-position: center;
-
 	-webkit-background-clip: text;
 	color:transparent	
 }
@@ -138,16 +137,17 @@ div.wcg{
 	padding-top: 50px;
 	font-size: 25px;
 }
-.p,.pl{
+.p{
 	color: white;
 }
-.pl{
+.list{
 	display: flex;
     flex-direction: row;
-    list-style: none;
+    
 }
-.pl li{
+.list input{
 	padding-right:30px;
+	margin-right: 10px;
 }
 
 

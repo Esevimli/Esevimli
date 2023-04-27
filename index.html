@@ -5,6 +5,29 @@
 <title>esevimli.github.io</title>
 	
 	<link rel="stylesheet" href="css/be.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+	$(document).ready(function(){
+  $('.tümü').click(function(){
+    $('.pcshi, .pasi,.phti, .pcssi, .pphi').show();
+    
+  });
+});
+$(document).ready(function(){
+  $('.yazilimlist').click(function(){
+    $('.pcshi, .pasi').show();
+    $('.phti, .pcssi, .pphi').hide();
+  });
+});
+
+$(document).ready(function(){
+  $('.weblist').click(function(){
+    $('.phti, .pcssi, .pphi').show();
+    $('.pcshi, .pasi').hide();
+  });
+});
+
+</script>
 </head>
 
 <body>
@@ -52,10 +75,13 @@
 	
 	<div class="bigbox">
 		<h3 class="p">Projelerim</h3>
-			<ul class="pl">
-				<li class="yazilimlist">Yazılım</li>
-				<li class="weblist">Web</li>
-			</ul>
+		<div class="list">
+			<input type="button" class="tümü" value="tümü">
+			<input type="button" class="weblist" value="web">
+			<input type="button" class="yazilimlist" value="Programlama">
+		</div>
+		
+		
 		<div class="piil">
 			<p class="pcshi" onclick="location.href='Exe/Timer2.exe'"></p>
 			<p class="pasi"></p>
