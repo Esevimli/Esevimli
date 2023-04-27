@@ -1,0 +1,137 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+h3 {
+	color:blue;
+}
+p {
+	color:blue;
+}
+div {
+	color:blue;
+}
+*/
+
+.a {
+	color: blue;
+}
+/* .(nokta) class belirtecidir burda a classındaki olan bütün etiketleri mavi yaptı*/
+.t{
+	font-weight: bold; /*kalın yazar*/
+}
+.a.t/*bu şekilde iki class da belirtilebilir*/
+{
+	
+
+	color: green;
+}
+#p2{
+	color: purple;
+}
+/*#id seçer*/
+.title{
+	font-size: 24px;		
+	color: red;
+}
+
+
+/* 
+*{
+	color: pink;
+}
+*/
+/* *(yıldız) evrensel seçicidir bütün etiketleri seçer ancak önceliği geride sanırsam eğer rengi değiştirilmiş bi etiket varsa onu değiştirmiyo*/
+
+div *{
+	color: pink;
+}
+/* div * bütün div etiketlerinin içindeki etiketleri seçer ama divin direk kendi içine yazılanları seçmez sayfaya göz atarsan daha iyi anlarsın torun seçici deniyo buna aşşağıda başka örnekleride var*/
+
+/*
+h3, p, div ,.a , #ts{
+	color: blue;
+}
+*/
+/*bu şekilde birden fazla seçiceksen , kullanabilirsin*/
+
+/*
+div b {
+	color:red;
+}
+*/
+/* div içindeki b etiketini seçer*/
+
+.box b {
+	color: blue;
+}
+
+/*box classı içindeki b etiketini seçer*/
+
+
+p > b {
+	color: blue;
+}
+
+/* 2.nci paragrafta çalışmayıp birinci paragrafta çalışır çünkü 2nci paragrafta b le p nin arasında span var > işareti direk kendi içinde olduğunu belitrmek için kullanılır*/
+
+
+h3.kardeş + p {
+	color: red;
+}
+/* + kardeş classlı h3 den sonraki p nin içindekileri seçer*/
+
+h3.genelkardeş ~ p {
+	color: red;
+}
+/* ~ ile genelkardeş classlı h3 etiketinden sonraki bütün p leri seçer*/
+
+ul li.list~ li{
+	color:green;
+}
+/*sadece ul etiketinin içindi li ler için geçerlir*/
+
+/*
+abbr[title] {
+	color: green;
+}
+
+img[alt]{
+	background: green;
+}
+
+img[height] {
+	background: blue;
+}
+*/
+
+/* [] nitelik seçmek için kullanılır*/
+
+a[target="_blank"]{
+	color:green;
+}
+/* = kısmına göre bir nitelik seçmek için kullanılır*/
+
+
+abbr[title~="kbl"]{
+	color: green;
+}
+/* = in başına ~ işareti ekleyerek içinde bu kelime olan bütün title ları seçer yani kbl 2 de seçilir ancak kbl3 seçilmez 3 ile kbl arasında boşluk olması lazım*/
+
+div[class^="div"]{
+	background: yellow;
+}
+/* ^ seçicisi belirlenen kelime ile başlayanları seçer burda class ismi div ile başlayanları seçiyo
+*/
+
+
+div[class$="di"]{
+	background: green;
+}
+
+/* $ seçicisi yukardakinin tam tersine cümlenin sonundan seçiyo
+*/
+
+div[class*="box"]{
+	background: purple;
+}
+/*nitelikteki title geçen div etiketini seçer*/

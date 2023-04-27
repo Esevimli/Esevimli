@@ -1,0 +1,148 @@
+@charset "utf-8";
+/* CSS Document */
+.bykbaslik{
+	font-size: 60px;
+	color: red;
+}
+
+.title{
+	font-size: 30px;
+	color: red;
+}
+
+li:hover{
+	background: green;
+}/*hover fare üzerine geldiğinde çalışır*/
+
+div:hover{
+	background: peru;
+}
+
+div span:hover{
+	background: plum;
+}
+
+button:hover + ul{
+	display: none;/*görünmez yapar*/
+}
+/*button:hover+ul buttonun üzerine geldiğinde ul ye köşeli parantezin içindekini işle burdaki artı hover dan sonra gelen ul etiketini seçer eğer arada başka bir etiket varsa çalışmaz*/
+
+p::selection{
+	background: lime;
+}
+p:hover::selection{
+	background: rebeccapurple;
+}/*selection mouse ile tut çek olayıydı hatırlamıyosan bu yukarıdaki hover ile mouse üzerine tutulduğunda seçimin rengini mor yapar ilk p deki yeşil yaptığı için mouse u üzerine götürüp getirince rengi değişir*/
+
+a::after{
+	content: '(' attr(href) ')'
+}
+a:hover::after{
+	display: none;
+}
+/*mouse a nın üzerine geldiğinde afterın içinde olanları gizler*/
+
+input[type="radio"]:checked + span{
+	color:red;
+}/*input radio işaretlendiyse spanın içindekini kırmızı yap*/
+
+
+.checkbox:checked + .box{
+	display: none;
+}
+
+.checkbox2{
+	display: none;
+}/*checkbox kutusunu gizler*/
+
+.button2::before{
+	content: attr(data-hide);
+}/*buttona data-hide değişkenini ekler*/
+
+.checkbox2:checked + .button2::before{
+	content: attr(data-show);
+}/*checkbox2 işaretlendiğinde button2 nin before sınıfının değişkenini data-show değişkeni ile değiştirir*/
+
+.checkbox2:checked + .button2+.box2{
+	display: none;
+}/*checkbox2 işaretlendiğinde bunun ardındaki(+).button2 nin ardındaki(+) box2 yi gösterme*/
+
+.fcs:focus{
+	background: lime;
+}/*focus odak bi textboxa tıkladığında mesela focus onda olur klavyeden falan yazınca içine yazarsın sayfada başka bi yere tıkladığında bu focus gider burda yazdığım kodu sayfada dene daha iyi anlarsın(.fcs classlı butona tıkla ardından sayfanın herhangi bi yerine tıkla)  */
+.ifocus{
+	background: blue;
+	color: red;
+	border-color: red;
+}
+
+.afocus:focus{
+	background: yellow;
+}
+
+div:focus{
+	background: yellow;
+}/*div p gibi etiketler default olarak focus alamaz ancak html tarafında manuel olarak tabindex ekleyebilirsin*/
+
+
+li:focus{
+	background: teal;
+}
+
+ul:focus-within{
+	background: yellow;
+}/*focus alan li etiketinin ebeveyni olan ul etiketine işlem yapar*/
+
+
+.onlychild li:only-child{
+	background: yellow;
+}/*tek çocuk olan etiketi seçer yani örnek ul nin içindeki li nin yanında başka bir li yoksa seçer varsa seçmez*/
+
+.onlyoftype div:only-of-type{
+	background: yellow;
+}/*only childın aynısı ama tipe göre seçer ebeveynin içindeki tek bir div varsa çalışır yanında em p falan gibi başka etiketler olsada çalışır ancak yanında başka bir div etiketi varsa çalışmaz*/
+
+abbr:not([title]):not(.not){
+	background:  lime;
+}/*not şarta uymayanları seçer burda title ı olmayan ve not classına sahip olmayan bütün abbrleri seçiyor*/
+
+
+li:empty{
+	display:none;
+}/*etiketin içi boşsa gizler eğer içinde boşluk varsa veya enterla ayrılmışsa boş gözükmediği için bunları gizlemez*/
+
+input:valid{
+	border-color: green;
+}
+input:invalid{
+	border-color: tomato;
+}/*html tarafında koşul koyup uyarsa valid uymazsa invalidi çalıştırabilirsin koşul dediğim örneğin required ekleyip içine birşey yazılmadığı sürece border color kırmızı diyebilirsin veya minlength"3" dersen inputun içinde 3 den fazla harf varsa border color yeşil yoksa kırmızı olur  */
+
+input:valid + span::before{
+	content: '✓';
+	color:green;
+}/* + yüzünden inputun ardından gelen spana işler*/
+
+input:invalid + span::before{
+	content: '×';
+	color: tomato
+}
+
+
+p:target{
+	background: yellow;
+}/*hedeflenen p etiketine işlem yapar bu hedefleme html tarafında id verilerek yapılıyo sanırsam ileride muhtemelen daha güzel anlatır*/
+
+input:in-range{
+	background: green;
+	color: white;
+}
+
+input:out-of-range{
+	background: red;
+	color: white;
+}/*bu in range out of range valid ve invalid ile aynı işi yapıyo gibi farkından emin değilim*/
+
+:root{
+	background: tomato;
+}/*etiketlerin kökenini seçiyo yani html i. önceliği html den yüksektir htmle işlem yapma için kullanılabilir bir nevi html i seçiyo yani*/

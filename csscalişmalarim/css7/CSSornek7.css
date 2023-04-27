@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+h1{
+	color:red;
+	font-size: 60px;
+	letter-spacing: 10px;
+}
+h2{
+	color: red;
+ 	font-size:30px;
+	letter-spacing: 10px;
+}
+
+body.ff{
+	/*font-family: Arial;*//*body içine yazılan bütün fontların tipini arial yapar*/
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif"/*font ailesi kullanıcının bilgisayarında bu fontlardan bulunanlarından birini rasgele seçer*/
+}
+/*div{	
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif"
+}*/
+
+div.fs{
+	font-size:20px;
+}
+
+h3.fst{
+	font-style: italic;/*fontu italic yapar*/
+}
+
+div.fv span{
+	font-variant: small-caps;
+}
+
+
+
+div.fw{
+	/*1-1000
+100 - ince(thin)
+200
+300-light
+400-normal
+500-medium
+600-semi bold
+700-bold
+800-extra bold
+900-heavy*/
+	font-weight: 700;
+}
+h3{
+	font-weight: 400;
+	/*her font tipi sayı şeklinde yazılmasını kabul etmez bold medium gibi yazı ister ve bu semi bold extra bold heavy gibi türlerin hepsi olmayada bilir ancak thin medium ve bold çoğunda vardır */
+}
+
+p.lh{
+	line-height: 24px;/*daha okunabilir yapmak için kullanabilirsin*/
+	/*font size dan sonra yazılması gerekir*/
+}
+
+/*font-size
+font-family
+font-style
+font-variant
+font-weight
+line-weights*/
+
+p.fz{
+	font:/*font style-->*/italic /*font weight-->*/bold/*font variant-->*/ small-caps/*font size-->*/20px/*line height-->*//30px /*font family-->*/Arial,sans-serif;
+}
+
+h3.ls{
+	letter-spacing: 10px;/*harfler arası boşluk oluşturur*/
+}
+
+p.ws{
+	word-spacing:5px;/*kelimeler arası boşluk oluşturur*/
+	/*word-spacing:normal;*//*normale döndürür*/
+}
+
