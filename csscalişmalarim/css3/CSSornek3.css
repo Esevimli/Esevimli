@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+h3.bykbaslik{
+	color: red;
+	font-size: 60px
+}
+
+h3.title{
+	color: red;
+	font-size: 32px
+}
+
+div{
+	background: yellow;
+}
+
+div::after {
+	content: ' sonraki yazı';
+	color: red;
+	background: blue;
+}
+*/
+/*::after ile divde yazdığının yanına ekliyo burdaki renk değiştirmele afterın içindeki sonraki yazıyı etkiler*/
+
+/*
+div::before {
+	content: 'önceki yazı ';
+}
+
+div.box::after {
+	content: attr(data-erd);
+	color: red;
+	background: blue;
+}
+div.box::before {
+	content: attr(data-id);
+}
+*/
+/*attr nitelik atar data-erd ve data-id içindeki değeri .box classlı div in sonrasına veya öncesine atıyor*/
+/*
+a[target="_blank"]::after{
+	color: green;
+	content: '('attr(href)')';
+}
+*/
+/* '(' bunun gibi sadece parantezleri tırnak içinde alıp attr(href) vermeyerek onu bi string yazı değilde link olarak göstertebilirsin*/
+
+/*
+p::first-line{
+	background: yellow;
+}*/
+/*ilk satırı seçerr*/
+/*
+p::first-letter {
+	color: red;
+	font-size: 60px
+}*/
+/*ilk harfi seçer*/
+
+/*
+::selection{
+	background: blue;
+}
+*/
+/*selection bi bi sayfada kopyala ma yapmak için mouse u tutup çekersin ya o olay yapılınca çalışır*/
+/*
+p::selection{
+	background: red;
+}
+*/
+/*buda sadece p etiketinde yapılınca çalışır*/
+
+

@@ -1,0 +1,166 @@
+@charset "utf-8";
+/* CSS Document */
+.bykbslk{
+	font-size: 60px;
+	color: red;
+}
+
+.title{
+	font-size: 25px;
+	color: red;
+}
+span.wh{
+	width: 300px;
+	height: 300px;
+	background: lime;
+}/*span satır içi bir etiktettir yani boyutu içeriğine bağlıdır içine bişey yazdıkça width i genişler height i genişlemez sadece yana doğru uzar burdaki width ve heightlerde bu tarz satır içi etiketlerde işe yaramaz width ve heightini bu şekilde değiştirebilmek için spanı block seviyesi bir etikete çevirmek gerekir bunun nasıl yapılacağı ileriki derslerde anlatılacak*/
+
+div.wh{
+	width: 300px;
+	height: 50%;
+	background: lime;
+}/*div block seviyesi elemandır bir satırın genişliği ve uzunluğunda oluşur width ve height ile boyutu değiştirilebilir */
+/*% ile ebeveyninin genişliğine oranla boyutunu widthin boyutu %70 ise ebeveyni olan bodynin widthinin yüzde 70 i kadar yer kaplar bodynin genişliği sayfanın genişliği ile aynıdır default olarak yani sayfanın %70 i ancak body nin heighti default 0 dır ve içeriğine bağlı olarak genişler o yüzden yüzde ile vermek ağrıza çıkartır ama eğer kullanmak istiyosan bodynin ve html(bodynin ebeveyni) in height ini aşağıdaki gibi ayarlayabiirsin*/
+
+html, body{
+	height: 100%
+}
+
+
+
+
+div.mwmh{
+	max-width: 30%;
+	min-width: 600px;
+	background: lime;	
+	min-height: 100px;
+	max-height: 600px;
+}/*max width min height ile genişliği ve uzunluğuna kısıtlama koyabilirsin */
+
+div.mcmc{
+	background: lime;
+	width: min-content;
+}/*maxcontent divin genişliğini içeriği kadar geniş yapar içindeki cümle nin boyutunu alır yani min-content ise cümledeki en uzun kelimeye eşitler genişliği heighte de aynısını yapabilirsin*/
+
+div.padding{
+	background: lime;
+	padding: 50px;
+	/*
+	padding-top:50px;
+	padding-right: 100px;
+	padding-bottom: 15px;
+	padding-left: 30px;
+	*/
+}/*div in içeriğinin sağına soluna üstüne falan boşlu bırakabilir sayfada bak daha iyi anlarsın top bottom falan yazmadan direk padding dersen 4 tarafda verilen mesafeyi koyar*/
+
+div.margin{
+	background: purple;
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	
+	/*margin: 50px;*/
+	/*
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-right: 50px;
+	margin-left: 50px;
+	*/
+}/*margin ile etiketin sağa sola mesafesini falan belirleyebilirsin margin left auto dersen etiketi soldan mümkün mertebe uzaklaştırır(sağa gider) hem margin left hemde margin right ı auto yaparsan ortalar bottom ve toptada aynı şekilde left right vermeden margin auto dersen tüm yönlerden ortalar*/
+
+div.border{
+	width: 250px;
+	height: 250px;
+	background: lime;
+	/*border-style: dashed;*/
+	/*kenarlarını işaretler bu dashed çizgili yapıyo başka şekilleride var bu borderlar etiketin içeriğinide itebilir örn aşşağıdaki width 50 px yapsan içerik daha bi ortaya doğru gider borderla iç içe geçmez*/
+	/*border style aşşağıdaki gibi top bottom left right ayrı ayrı verilebilir*/
+	border-bottom-style: groove;
+	border-top-style: solid;
+	border-right-style: double;
+	border-left-style: dotted;
+	
+	/*border-width: thick;*//*yukarda oluşturduğun kenarların genişliğini işaretliyo ancak kesin değerler vermek daha mantıklı aşşağıdaki gibi*/
+	border-width: 10px;
+	/*style de olduğu gibi top right left falan yazarak ayrı ayrıda belirleyebilirsin*/
+	
+	border-color: tomato;
+	/*style de olduğu gibi top right left falan yazarak ayrı ayrıda belirleyebilirsin*/
+	
+}
+
+.border2{
+	margin-top: 20px;
+	width: 200px;
+	height: 200px;
+	background: tomato;
+	border: 10px solid purple;/*burdaki border yukarıda yaptığın width color ve stylin daha kısa hali */
+	border-top: 10px solid blue;/*buda top bottom right şeklinde yazılabilir*/
+	border-left:none;/*sol kenarı kaldırır*/
+}
+/*
+borderda olan style width ler outline da da vardır ancak borderdaki gibi top left şeklinde ayrılmaz
+outline-style
+outline-width
+outline-color
+outline
+*/
+div.outline{
+	width: 200px;
+	height: 200px;
+	background: blue;
+	margin: 50px auto;
+	border: 5px dashed tomato;
+	/*outline-style: dashed;*/
+	/*border etiketin içinde köşeleri oluştururen outline etiketin dışında oluşturur*/
+	/*
+	outline-width: 10px;
+	outline-color: orange
+	*/
+	outline: 10px dashed green;/*yukarıdaki outline ların kısaltılmış hali*/
+	outline-offset: 10px;/*kenarlık ile outline arasındai mesafeyi ayarlamak için kullanılır*/
+}
+
+div.boxsizing{
+	width: 200px;/*padding border etiketin genişliğini ve uzunluğunu büyütebilir mesela aşağıdaki padding 15px width ve height i 230 yapar(iki köşeden 15+15=30)*/
+	height: 200px;
+	background: turquoise;
+	padding: 15px;
+	border: 10px solid wheat;
+	box-sizing: border-box;/*yukarıda width in yanında anlattığımın çözümü bu border ve padding için gerekli alanı 200 width ve height in içinden verir*/
+}
+
+div.bradius{
+	width: 300px;
+	height: 300px;
+	border: 10px double black;
+	/*
+	border-top-left-radius: 50px;
+	border-top-right-radius: 100px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 65px;
+	*/
+	/*border radius köşeleri oval bi hale getiriyo sayfada bak daha iyi anlarsın*/
+	border-radius: 50px;/**/
+}
+
+div.bradius2{
+	width: 300px;
+	height: 300px;
+	border: 10px double black;
+	border-radius: 50%;/*etiketi tam yuvarlak yapar width ile height değeri aynı olan bir etikette geçerlidir width ve height ile aynı değeride verebilirsin %50 yazmak yerinde yani burda 300px */
+}
+
+img{
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+}
+
+h1.color {
+	/*color:darkturquoise;*/
+	color: rgba(103,134,17,.43);/*rgba ile opaklıkta ayarlanabilir bu sondaki 43 yüzde 43 opak anlamına gelir*/
+}
+body{
+	color:red;
+}/*body içindeki fontların rengini kırmızı yapar div p gibi etiketler içindeki fontlarda dahil*/

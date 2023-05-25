@@ -1,0 +1,142 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1{
+	color:red;
+	font-size: 60px;
+	letter-spacing: 10px;
+}
+h2{
+	color: red;
+ 	font-size:30px;
+	letter-spacing: 10px;
+}
+
+body{
+	background-image: url("../foto/bg1.jpg");/*default olarak eğer resim sayfayı kaplamıyorsa resmi tekrarlar*/
+	/*background-repeat: no-repeat; no repeat resmin tekrarlamasını engeller*/
+	/*background-repeat: repeat-x; x yatay olarak tekrar eder y dikey olarak*/
+	/*background-repeat: space;görseli kırpmadan ezip büzmeden sığabiliceği kadar sırdırır ve varsa aralarına boşluk koyar*/
+	/*background-repeat: round; space in tam tersi arada boşluk bırakmaz ve sayfa küçüldüğünde veya büyüdüğünde resim ezilip büzülebilir*/
+	
+	
+	background-repeat: round;
+	/*background-position:top rightleft right top center bottom özelliklerini alabilir top right top left gibi yazarsan sağ üst sol üst falanda koyabilirsin*/
+	
+	background-position:25px 0;/*yatay 25 px dikey 0 
+	,25 px bottom gibi de yazabilirsin o zaman yatay 25 dikey olarakta aşşağıdan başlatır, %20 %70 vererekte yerleştirilebilir*/
+	
+	 	
+}
+div.bc{
+	padding: 30px;
+	border: 20px dashed black;
+	font-size: 100px;
+	font-weight: bold;
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	text-align: center;
+	background-image: url("../foto/np1.jpg");
+	background-position: center;
+	/*background-clip:content-box;padding box borderbox gibi özellikleride var arka planın nereleri doldurucağını belirlemekte yardımcı olur text yazarak yazıyada ekleyebiliyosun bacgroundu ama bu test aşamasında olduğundan kullanımı aşşağıdaki webkit ile birlikte oluyo*/
+	-webkit-background-clip: text;
+	color:transparent	
+}
+
+div.bs{
+	width: 500px;
+	height: 200px;
+	padding: 40px;
+	border: 10px dashed black;
+	/*background-repeat: no-repeat;
+	background-image: url("../Foto/15.jpg");
+	background-position: center;
+	background-origin: border-box;*/
+	/*resmin başlangıç yerini belirler burda fotoyu cover ile koyunca borderın solunda ve sağında oluşan boşlukları doldurmak için kullandım*/
+	/*background-size: cover;   contain=sığdır,cover=doldur*/
+	
+	
+	background-image: url("../foto/Css.png"),url("../foto/ht.png");
+	background-repeat: no-repeat;
+	background-position: center,bottom right;/*virgülün öncesi ilk resim için sonrası ikinci resim*/
+	background-origin: border-box;
+	background-size: 100px 200px, 50px 120px; /*virgülün öncesi ilk resim için sonrası ikinci resim*/
+	
+}
+body{
+	/*background-image: url("../Foto/15.jpg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-attachment: fixed;*/
+	/*fixed görseli sabit tutar örn görsel sayfanın sağ üst köşende ise scrollu indirirken resim hep ekranın sağ üst köşesinde görünür halde olur şahsi görüşüm kullanmadığında site daha iyi gözüküyo ama bu şekilde kullanıren boyutlarıyla falan o kadar uğraşmaya gerek kalmaz muhtemelen ancak aşşağıdaki p etiketi içinde kullanılan örnek ile baya seksi*/
+	/*background-position: center;*/
+}
+
+p.ba{
+	height: 300px;/*p yi genişletir*/
+	background-image: url("../foto/np1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+div.ba{
+	height: 400px;/*divi genişletir*/
+	background-image:url("../foto/web.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+div.lg{
+	width: 200px;
+	height: 200px;
+	/*background: linear-gradient(to left,orange,red,blue,purple); sağdan sola doğru turuncudan kırmızıya rengi değiştirir to right to top to bottom da girebilirsin bunları girmezsen default olarak yukarıdan aşşağıya renk geçişi yapars to top right diye yazarsan sol alttan başlayıp sağ üste değişir gene to bottom left falan diğer yönlerlede yazabilirsin istediğin kadar fazla rengi kullanabilirsin */
+	
+	/*
+	background: linear-gradient(to left,orange 0 20%,red 20% 40%,blue 40% 60%,purple 60% 80%,green 80% 100%);yüzde girek kaplayacağı alanları belirleyebilirsin orange yüzde 0 ile 20 arasını doldurur red 20 ile 40 arasını ....vsvs*/
+	
+	background-image: linear-gradient(to top, transparent ,red),url("../foto/software.jpg");/*fotolar ile de kullanılabilir birden fazla renkte eklenebilir ama güzel durmuyo diye eklemedim*/
+		background-size: cover;
+	
+}
+
+
+div.rg{
+	width: 200px;
+	height: 200px;
+	background-image: radial-gradient(lime,blue);/*ortadan dışarı doğru değişir renk orta yeşil dışı blue at left dersen sol ortadan başlar top ise yukarı orda ....vsvs*/
+}
+
+div.cg{
+	width: 200px;
+	height: 200px;
+	background-image: conic-gradient(lime,blue);/*tepeden başlayıp saat yönünde değişir renkg*/
+}
+
+div.rlg{
+	width: 200px;
+	height: 200px;
+	background-image: repeating-linear-gradient(lime 0px 5px,blue 5px 10px);/*repeating eklersen renkler tekrar eder*/
+}
+
+div.rrg{
+	width: 200px;
+	height: 200px;
+	background-image: repeating-radial-gradient(lime 0px 5px,blue 5px 10px);
+}
+
+div.rcg{
+	width: 200px;
+	height: 200px;
+	background-image: repeating-conic-gradient(lime 0deg 30deg,blue 30deg 60deg);/*deg = degree derece yani*/
+}
+/* Gradient oluşturma araçları
+https://cssgradient.io/
+https://uigradients.com/
+https://www.colorzilla.com/gradient-editor/
+*/
+/*Hazır gradient desenleri
+https://leaverou.github.io/css3patterns/
+http://standardista.com/cssgradients/
+*/

@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1{
+	color:red;
+	font-size: 60px;
+	letter-spacing: 10px;
+}
+h2{
+	color: red;
+ 	font-size:30px;
+	letter-spacing: 10px;
+}
+
+
+
+p{
+	width:50px;
+	border: 3px solid lime;
+}
+p.wh1{
+	hyphens: auto;
+	/*kelimeler taşarsa sonuna tire koyup alt satıra kaydırır*/
+}
+p.wh2{
+	word-break: break-all;
+	/*cümle taşarsa alt satıra geçirir*/
+}
+
+h3.ts{
+	font-size: 70px;
+	font-weight: 900;
+	text-align: center;
+	text-shadow: -10px -10px 10px red;/*yazının arkasına istenen renkte bir gölge verir pixel ayarını değiştirerek gölgenin düşüceği yeri değiştirebilirsin*/
+}
+

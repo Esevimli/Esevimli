@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+
+h3.bykbaslik{
+	font-size: 60px;
+		color:red;
+}
+h3.title{
+	font-size: 30px;
+		color:red;
+}
+
+li:first-child{
+	background: purple;
+}/*li nin ebeveyni(ul) içindeki ilk li yi seçiyo eğer ul içindeki ilk eleman li değil ise çalışmaz*/
+
+.list li:first-child{
+	background: yellow;
+}/*list classı olan li nin ebeveyni(ul) içindeki ilk li yi seçiyo eğer ul içindeki ilk eleman li değil ise çalışmaz*/
+
+div:first-child{
+	background: green;
+}/*body içindede kullanılabilir burda ebeveyni body eğer body içindeki ilk eleman div değil ise gene çalışmaz*/
+
+li:last-child{
+	background: green
+}/*first child için geçerli olanlar bundada geçerli*/
+
+.list li:last-child{
+	background: red;
+}
+
+div:first-of-type{
+	background: orange;
+}/*first childdan biraz daha kullanışlı gibi direk ebeveyndeki ilk div etiketini seçiyo üstünde p li falan olması farketmez*/
+
+p:last-of-type{
+	background: cyan;
+}/*first of type dakiler bundada geçerli*/
+
+
+
+
+.nthc li:nth-child(3n+2){
+	background: lime;
+}/*verilen değerdeki li etiketini seçer 1 2 3 gibi sayı verilebilir veya odd ve even ile tek ve çift sayıları da seçtirebilirsin*/
+/*3n yazarsan her 3ncü elemanı seçer 3 6 9 gibi yanına + ve sayı(3n+2 gibi) ekleyerek 2nci elemandan saydırabilirsin o durumda 2 5 8 diye seçer 3*/
+
+.nthc2 li:nth-child(n+4){
+	background: pink;
+}/*n+4 ile 4den başlar ve üstündeki bütün elemanları seçer 4 de dahil*/
+
+.nthc3 li:nth-child(-n+8){
+	background: red;
+}/*-n+8 8 den küçüklri seçer 8 de dahil*/
+
+.nthc4 li:nth-child(n+4):nth-child(-n+8){
+	background: cyan;
+}/*8 den 4 e kadar seçer 8ve4 de dahil*/
+
+.nthc5 li:nth-child(n+4):nth-child(even):nth-child(-n+8){
+	background: cyan;
+}/*8 ve 4 arasındaki çift sayıları seçer*/
+
+.nthc6 li:nth-child(4){
+	background: pink;
+}/*4 üncü li yi seçer ama first ve last child gibi ebeveyne(ul) göre seçer eğer ul içindeki 4üncü etiket li değilse çalışmaz*/
+
+.nthlc li:nth-last-child(3n){
+	background: yellow;
+}/*nthchild daki herşey bundada geçerli ama sondan geriye yapar işlemi örn 9luk listede bu kod girilirse 7 4 1 seçilir (3er 3 er geriye sayıyo)*/
+
+strong:nth-of-type(3){
+	background: seagreen;
+}/*nth child daki herşey burdada geçerli nthc6 da anlattığım hariç direk ebeveyn içindeki strong etiketleri arasında 3 üncüyü seçer*/
+strong:nth-last-of-type(3){
+	background: lightblue;
+}/*nth of type ile aynı ama sonda geriye sayar*/

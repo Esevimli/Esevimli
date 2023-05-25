@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form Etiketleri</title>
+</head>
+
+<body>
+	<form action="" method="get" id="form1" enctype="multipart/form-data">
+		
+		
+	<!--action form nereye gidiceğini belirler boş bırakılırsa kendi içine gönderir yani bulunduğu sayfaya-->
+		<!--method gönderme yöntemi daha sonra işlenicek-->
+		
+		İNPUTLAR <br><br>
+		<input> <br>
+		<!--input bu şekilde kendi başına kullanılınca kullanıcının girdi yapabiliceği bir kutucuk oluşturur-->
+		<fieldset disabled>
+			<!--fieldset gruplamak için kullanılabilir-->
+			<!--fieldseti disabled yaparsan içerisindeki bütün elemanlar disabled olur-->
+			<legend>Giriş Yap</legend>
+			<!--legend ile fieldsete başlık verebilirsin-->
+			<input maxlength="6" type="text" placeholder="Kullanıcı adıını giriniz"> <br>
+		<!--input text tipi ile kullanılınca normal yazı yazabiliceğin bir kutu oluşturur yukarıdakiyle aynı-->
+		<!--maxlength ile karakter sınırı belirleyebilirsin-->
+		<!--placeholder kutucuğun içine yazar-->
+		<input type="password"> <br>
+		<!--input kutusunun için girilen saklanır-->
+		<input type="file"> <br>
+		<!--input file dosya seçimi yapabiliceğin bi buton oluşturur form içinde file tipi bi input varsa yukarıdaki gibi formda enctype isimli 3.ncü bir nitelik girmek gerekir-->
+		<input type="checkbox"> kabul ediyorum <br>
+		</fieldset>
+		
+		
+		
+		
+		<br><br>LABELLAR <br><br>
+		
+		
+		<label>
+			<input required type="checkbox"> kabul ediyorum
+		</label> <br>
+		<!--required ile doldurmadan geçemicek hale getirebilirsin aşağıdaki kullanıcı adı şifre için falanda kullanılabilir radio gibi seçim gereken yerlerde ikisinede required koyunca ikisinden birinin seçilmesi gereken bi hale gelir-->
+		<label>
+			<input type="checkbox" checked> kabul ediyorum 2
+		<!--checked ile form açıldığında checkbox işaretli olarak gelir biraz aşağıdaki radio içinde kullanılabilir-->
+		</label> <br>
+		<!--checkbox türü bi input tipi oluşturur-->
+		<!--bu şekilde label içine alınırsa kabul ediyorum yazısına tıklayarakta checkbox a tik atılabilir-->
+		<label for="kadi">Kullanıcı Adı</label>
+		<input readonly id="kadi" type="text" value="tayfunerbilen"> <br>
+		<!--yukarda olduğu gibi input bir id verip bu id ye kullanıcı adı labelından for ile ulaşabiliriz bu durumda kullanıcı adı labelına(yazısına) tıklandığında id si alınan inputada tıklanmış olur bu aşşağıdaki 4 lüde aynı kafa-->
+		<!--readonly ile inputu okunabilir ama değiştirilemez yapabilirsin-->
+		<label for="sfr">Sifre</label>
+		<input disabled id="sfr" type="password"> <br>
+		<!--disabled ile inputu etkileşime geçilemez yapabilirsin aynı zamanda değeri alınamaz da yapar o yüzden readonly genellikle daha mantıklı-->
+		<label for="e">eposta</label>
+		<input required type="email" id="ep"> <br>
+		<!--eposta inputu required ile birlikte kullanılırsa @ kullanmayı gerekli hale getirir
+aynı zamanda mobilde denendiğinde kutuyaa tıklayınca klavyede @ işaretinin gözükmesinide sağlar-->
+		<label for="ds">Dosya Seç</label>
+		<input id="ds" type="file" name="dosya[]" multiple accept="image/*"> <br>
+		<!--accept image/* yapınca sadece resim dosyalarını seçilebilir yapar / dan sonraki * aslında mime tipinin yazıldığı yer(gif,jpeg gibi)bunu * yapınca bütün mime tiplerini kabul eder-->
+		<!--multiple ile birden fazla dosyayı seçilebilir yapar ancak bunun programlama tarafında işe yaraması için için name niteliğinin sonuna [] konulması gerekir-->
+		<label>
+		<input required type="radio" name="cinsiyet" value="erkek"> erkek
+		</label>
+		<label>
+		<input required type="radio" name="cinsiyet" value="kadın"> kadın
+		</label><br>	
+		<!--radio inputu birden fazla seçenek arasından birini seçiceğin bir şey koyar(ney olduğunu açıklaması zor direk sayfayı açıp bak) name niteliği ise aynı seçime dahil olduklarını belirtmek için kullanılır name kullanmazsan kullanıcı hepsini seçebilir-->
+		<!--value hangisinin seçildiğini belirtmek için bunlara bi değer atıyo ileriki konularla ilgili daha çok. value file hariç yukarıdaki ve aşağıdaki bütün inputlarda kullanılabilir -->
+		<!--radio gibi seçim gereken yerlerde ikisinede required koyunca ikisinden birinin seçilmesi gereken bi hale gelir-->
+		<input type="hidden" name="test" value="test">
+		<!--hidden sayfada gözükmez arka planda veri alıp vermek için kullanılır daha çok ileriki konularla alakalı-->
+		<input type="submit" value="al(get)" formaction="ornek11.html">
+		<!--submit formu göndermek için kullanılır formun içindeki inputlar name niteliği olmadan gönderilirse gittiği yer tarafından kullanılamaz-->
+		<!--formaction ile submite tıklandığında başka bi sayfaya gidebilirsin-->
+		<input type="submit" value="gönder(post)" formmethod="post">
+		<!--form get tipi olsa bile submit post ile methodu değiştirebilirsin-->
+		<input type="submit" formtarget="_blank">
+		<!--form target ile yeni bi sekme ye gönderebilirsin-->
+		<input type="submit" value="enctype" formenctype="multipart/form-data">
+		<!--formun başında bulunan formenctype burayada girilebilir-->
+		<input type="reset" value="sıfırla">
+		<!--reset formu resetlemek için kullanılır baştaki haline getirir yani-->
+	</form>
+	<!--burdan aşşağısı formun dışında kalıyo yukarıdaki submit form dışınddakilere işlemez-->
+	<br><br><br>
+	
+	<input type="color"> <br>
+	<input type="date"> <br>
+	<input type="datetime-local"> <br>
+	<!--renk veya tarih seçebiliceğin input tipleri datetime-local ile saatide seçebilirsin-->
+	<input type="month"> <br>
+	<input type="week"> <br>
+	<input type="number" min="5" max="15"> <br>
+	<!--number sayı yazılabilecek bir input açar min ve max ile bu sayı kısıtlanabilir-->
+	<input type="range" min="1" max="20" step="5">
+	<!--range sliderı açar ne için kullanılabilir emin değilim step ile kaçar kaçar arttırabiliceğini seçebilirsin-->
+	<input type="search" autofocus> <br>
+	<!--autofocus sayfa açılınca veya yenilenince otomatik olarak bu inputa odaklı halde açar -->
+	<input type="tel"> <br>
+	<input type="url"> <br>
+	<!--telin pc de olayı pek anlaşılmıyo ama mobil cihazlarda kullanılır bi hale getiriyo sanırsam.url de aynı şekilde telefonlarla alakalı daha çok-->
+	<input type="time"> <br>
+	
+	
+	<input type="text" name="kadi" autocomplete="off"> 
+	<!--autocomplete off ile daha önceden sık kullanılan girdileri(epostayı sık sık kullanınca başka sitelerde e yazınca e posta altta çıkar ya o olay) göstermesini engelleyebiliriz -->
+	<br>
+	
+	<input list="diller" name="diller" form="form1"> 
+	<!--diller isminde bi liste tipinde bi input kutusu oluşturur aşağıdaki option larda bu kutuya tıklandığında çıkan seçenekler bu html5 de gelen yeni bi özellik eski tarayıcılar çalıştırmayabilir-->
+	<!--name niteliği bir nevi değişken ismi gibi bişey-->
+	<!--formun name ini yazarak bu şekilde formun dışında olan bi inputuda forma ekleyebilirsin-->
+	<datalist id="diller">
+		<option value="HTML">
+		</option>
+		<option value="CSS"> 
+		</option>
+		<option value="JavaScript">
+		</option>			
+	</datalist> <br>
+	
+	<a href="Deneme1.html"><b>buraya</b> </a>tıklayıp ana sayfaya dönebilirsiniz <br>
+</body>
+</html>
